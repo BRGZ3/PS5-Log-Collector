@@ -2,6 +2,10 @@
 
 [English](README.md) · [Русский](README.ru.md)
 
+<p align="center">
+  <img src="ps5logcollector.png" width="1664" height="833" alt="PS5 Log Collecctor">
+</p>
+
 A portable Windows application for viewing, timestamping, and saving kernel logs from a jailbroken PlayStation 5 — without Netcat or command-line tools.
 
 > **Project status:** KLOG collection is available in `v0.1.1`. DEBUG support is planned for a future release.
