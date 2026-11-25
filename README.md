@@ -115,11 +115,6 @@ KStuff Metrics captures the reader payload's stdout/stderr, not ordinary game st
 
 This is a one-shot download of the saved file; live ShadowMountPlus monitoring is intentionally not part of this phase. The HTTP API is normally loopback-only, so ShadowMountPlus must be configured to bind its API to the local network (for example, `api_bind_address=0.0.0.0`). The API has no authentication, so expose it only on a trusted LAN. It may return only the tail when the file is larger than its response limit, and the status bar reports that condition.
 
-### Experimental DECI5 TTY probe
-
-The repository also contains a test-only read-only payload, `artifacts/deci5-probe.elf`. It probes known `/dev/deci_tty*` candidates on the console and sends compact binary frames that the collector renders as tagged hex/ASCII records. It does not write to a TTY, attach to a game, or implement the production DECI5 protocol yet.
-
-Build it with `./scripts/build-deci5-probe.sh` after setting `PS5_PAYLOAD_SDK`. For the first hardware test, use the existing KStuff Metrics reader slot to send the probe through loader port `9021`; the detailed procedure and interpretation are in [`docs/DECI5_PROBE.md`](docs/DECI5_PROBE.md).
 
 ## Connection troubleshooting
 
